@@ -1,0 +1,65 @@
+#wrapper{
+    background-color: #02203c;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo{
+    width: 10px;
+    height: 10px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h1{
+    color: white;
+    font-size: 48px;
+    font-family: monospace;
+}
+
+/* galaxy ovals creation */
+#logo::before{
+    content: '';
+
+    /* why? circle appeared on screen was very small, thought it was inline and changed to block, it worked */
+    display: block;
+    width: 100px;
+    height: 30px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+#logo::after{
+    content: '';
+
+    /* why? circle appeared on screen was very small, thought it was inline and changed to block, it worked */
+    display: block;
+    width: 100px;
+    height: 30px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+/* galaxy ovals orientation */
+#logo{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo::before{
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+#logo::after{
+    position: absolute;
+    transform: rotate(-45deg);
+}
