@@ -1,0 +1,65 @@
+#algo-expert {
+    width: 75%;
+    background-color: #626ee3;
+}
+
+#systems-expert {
+    width: 50%;
+    background-color: #890023;
+}
+
+#ml-expert {
+    width: 30%;
+    height: 75px;
+    background-color: #f37f1b;
+}
+
+#frontend-expert {
+    width: 40%;
+    background-color: #11967e;
+}
+
+#programming-expert {
+    height: 75px;
+    background-color: #f21b3f;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+/* flex box code */
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#algo-expert{
+    order: 1;
+    margin: auto;
+}
+
+#frontend-expert{
+    order: 2;
+}
+
+#programming-expert{
+    order: 2;
+    flex-grow: 1;
+
+    /* to satisfy that 10px gap condition */
+    margin-left: -14px;
+}
+
+#systems-expert{
+    align-self: center;
+}
