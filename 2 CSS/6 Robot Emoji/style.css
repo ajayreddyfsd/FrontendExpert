@@ -1,0 +1,147 @@
+.head{
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    background-color: #a4d9eb;
+    border: 5px solid #9bbcc2;
+    border-radius: 20px;
+}
+
+.bulb{
+    width: 30px;
+    height: 30px;
+    background-color: #ffa500;
+    border-radius: 50%;
+
+    /* overlap */
+    position: relative;
+    top: 5px;
+    z-index: 1;
+}
+
+.stick{
+    width: 10px;
+    height: 15px;
+    background-color: #808080;
+}
+
+.ear{
+    width: 10px;
+    height: 50px;
+    background-color: #c90a0a;
+}
+
+.ear:nth-child(1){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.ear:nth-child(2){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.eye{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 5px solid #00b3ff;
+    border-radius: 50%;
+}
+
+.nose{
+    width: 0px;
+    height: 0px;
+
+    /* triangle? */
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #c90a0a;
+}
+
+.mouth{
+    width: 100px;
+    height: 25px;
+    background-color: #dedede;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+
+    /* to align all the tooth */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tooth{
+    width: 5px;
+    background-color: black;
+    height: 100%;
+}
+
+/* positioning */
+.head{
+    position: relative;
+}
+
+.eyes{
+    /* to align each eye in eyes */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    /* to position inside head */
+    position: absolute;
+    gap: 20px;
+    padding-top: 25px
+}
+
+.ears{
+    /* to align each eye in eyes */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 75px;
+    transform: translateY(-50%);
+}
+
+.ear:nth-child(1){
+    position: relative;
+    right: calc(5px + 10px);
+}
+
+.ear:nth-child(2){
+    position: relative;
+    left: calc(5px + 10px);
+}
+
+.light{
+    /* to first align stick and bulb in its container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* positioning */
+    position: absolute;
+    top: calc(-30px - 15px);
+    left: 75px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.mouth{
+    position: absolute;
+    bottom: 25px;
+    left: 75px;
+    transform: translateX(-50%);
+}
+
+.nose{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
