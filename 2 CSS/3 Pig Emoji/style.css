@@ -1,0 +1,102 @@
+body{
+    background-color: black;
+}
+
+.head{
+    width: 200px;
+    height: 200px;
+    background-color: #ffc0cb;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.eye{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+
+    /* code to align pupils */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pupil{
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.ear{
+    width: 50px;
+    height: 50px;
+    background-color: #ffc0cb;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.nose{
+    width: 100px;
+    height: 60px;
+    background-color: #f57187;
+    border: 2px solid black;
+    border-radius: 35%;
+
+    /* code to align the nostrils */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nostril{
+    width: 25%;
+    height: 50%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* all positioning code */
+.head{
+    position: relative;
+}
+
+.ear{
+    position: absolute;
+    left: 10px;
+    z-index: -1;
+
+    /* protrude code */
+    top: -10px;
+}
+
+.ear:last-child{
+    /* since right prop was not applying, wrote left=auto, so that right gets applied */
+    left: auto; 
+    right: 10px;
+}
+
+.eye{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.eye:last-child{
+    /* since right prop was not applying, wrote left=auto, so that right gets applied */
+    left: auto;
+    right: 30px;
+}
+
+.nose{
+    position: absolute;
+    bottom: 30px;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
